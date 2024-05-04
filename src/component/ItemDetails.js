@@ -13,6 +13,7 @@ const ItemDetails = () => {
       {item ? (
         <div className="item-details-content">
           <div className="item-details-text">
+          <h3 className="">User Id :{item.userId}</h3>
             <p className="item-details-body">{item.body}</p>
           </div>
           <img
