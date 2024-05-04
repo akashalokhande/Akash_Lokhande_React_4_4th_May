@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const fetchDataRequest = () => ({
   type: "FETCH_DATA_REQUEST",
 });
@@ -16,12 +18,8 @@ export const fetchData = () => {
   return async (dispatch) => {
     dispatch(fetchDataRequest());
     try {
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/posts"
-      );
-      const data = await response.json();
-
-      dispatch(fetchDataSuccess(data));
+      const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
+      dispatch(fetchDataSuccess(response.data));
     } catch (error) {
       dispatch(fetchDataFailure(error.message));
     }
