@@ -1,13 +1,122 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card {
+  width: calc(22% - 16px); 
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
 }
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Responsive Styling */
+@media (max-width: 1200px) {
+  .card {
+    width: calc(30% - 16px); 
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(45% - 16px); 
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: calc(85% - 16px);
+  }
+}
+
+/* ItemDetails.css */
+
+
+.item-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 4rem;
+  padding: 20px;
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.item-details-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.item-details-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-details-text {
+  flex: 1;
+}
+
+.item-details-body {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.item-details-image {
+  width: 50%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .item-details-container {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .item-details-content {
+    flex-direction: column-reverse;
+  }
+  
+  .item-details-title {
+    font-size: 20px;
+    text-align: center; 
+  }
+
+  .item-details-body {
+    font-size: 16px;
+  }
+
+  .item-details-image {
+    width: 100%; 
+    max-width: none; 
+    margin-bottom: 10px; 
+  }
+}
+
